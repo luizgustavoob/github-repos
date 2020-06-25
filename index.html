@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Consultas Github</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="container">    
+    <h2 class="text-center mt-2 mb-4">Consultas Github</h2>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <form class="form my-2 my-lg-0">
+          <input id="search" class="form-control mr-sm-2" type="search" placeholder="Digite o nome do usuário (Ex: luizgustavoob)">
+          <button class="btn btn-primary col-md-6 offset-md-3 mt-2" type="submit">Pesquisar</button>
+        </form>        
+      </div>
+    </div>
+
+    <div class="mt-4 separador"></div>
+
+    <div id="viewUser"></div>
+
+    <script src="js/model/User.js"></script>
+    <script src="js/model/RepositoryList.js"></script>
+    <script src="js/model/Repository.js"></script>
+    <script src="js/services/HttpService.js"></script>
+    <script src="js/views/UserView.js"></script>
+    <script src="js/controllers/UserController.js"></script>    
+    <script>
+      const userController = new UserController();
+      userController.render();
+      document.querySelector('.form').onsubmit = userController.findUser.bind(userController);
+    </script>
+</body>
+</html>
