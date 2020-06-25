@@ -11,3 +11,6 @@ Deve-se primeiramente baixar o repositório e acessá-lo via terminal. Na sequê
 ## Execução
 
 Ainda no terminal e na pasta do projeto, executar ```npm run dev``` e a página será aberta no navegador.
+
+
+![](screenshot.PNG)
